@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  display: block;
+}
+
+input,
+select,
+button,
+textarea {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.center {
+  text-align: center;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 5px;
+  border-radius: 50%;
+  border: 4px solid #007bff;
+  border-color: #007bff transparent #007bff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.labelCheck {
+  align-self: flex-start;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+.checkbox {
+  cursor: inherit;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 0 !important;
+  margin-right: 10px;
+}
+
+.left-align {
+  text-align: left;
+}
+.fit-content {
+  width: fit-contentZ;
+}
+.mainLink {
+  color: white;
+}
+.appNav button + button {
+  margin-left: 10px;
+}
+.appForm {
+  margin-top: 18px;
+}
+.appForm input {
+  margin-bottom: 15px;
+}
+
+.typeBarItem {
+  cursor: pointer;
+}
+.brandBarItem {
+  cursor: pointer;
+}
+
+.deviceCard {
+  width: 180px;
+  cursor: pointer;
+  padding: 6px 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  height: 100%;
+}
+.deviceCard:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25), 2px -2px 5px rgba(0, 0, 0, 0.25),
+    -2px 2px 5px rgba(0, 0, 0, 0.25), -2px -2px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+button:disabled {
+  cursor: not-allowed;
+}
