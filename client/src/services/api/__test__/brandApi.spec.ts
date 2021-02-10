@@ -16,11 +16,11 @@ describe("brand api test", () => {
   afterEach(() => server.resetHandlers());
 
   afterAll(() => server.close());
-  test("success getAll", async () => {
+  test("success getAll brand", async () => {
     const result = await BrandApi.getAll();
     expect(result).toEqual(TEST_SUCCESS_BRANDS);
   });
-  test("fail getAll", async () => {
+  test("fail getAll brand", async () => {
     // server.use, чтобы изменить хэндлен
     server.use(
       rest.get(process.env.REACT_APP_API_URL + "brand", (req, res, ctx) => {
@@ -31,11 +31,11 @@ describe("brand api test", () => {
 
     expect(result.status).toBe("error")
   });
-  test("success create", async () => {
+  test("success create brand", async () => {
     const result = await BrandApi.create({ name: SUCCESS_BRAND_NAME });
     expect(result).toEqual(TEST_SUCCESS_BRAND_ITEM);
   });
-  test("fail create", async () => {
+  test("fail create brand", async () => {
     // server.use, чтобы изменить хэндлен
     const result: IResultError = await BrandApi.create({ name: NON_SUCCESS_BRAND_NAME }) as IResultError;
     expect(result.status).toBe("error")

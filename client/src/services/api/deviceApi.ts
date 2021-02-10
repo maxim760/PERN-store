@@ -46,7 +46,7 @@ export const DeviceApi = {
     try {
       const query = Object.entries(params)
         .reduce((acc: string[], [key, value]) => {
-          if (key in params && value) {
+          if (value) {
             acc.push(`${key}=${value}`);
           }
           return acc;
