@@ -13,11 +13,11 @@ import {
   setAuthError,
 } from "./slice";
 import { ILoadingStatus } from "../types";
+import { TEST_DATA_FROM_TOKEN, TEST_TOKEN } from "../../../forTest/consts";
 // https://www.jsonwebtoken.io
 const fakeSuccessData = {
   status: "success",
-  token:
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRlc3RAbWFpbC5ydSIsImlkIjoxLCJyb2xlIjoiVVNFUiIsImp0aSI6IjM0ODEyYmM1LWQ3MmEtNDJjMC05NmNhLTQ4NTNlYWQyNGIwNSIsImlhdCI6MTYxMjk2NjQ3MiwiZXhwIjoxNjEyOTcwMDcyfQ.9FFrDqaC-qr-Z3SCAn5OOELgXsM_x9xQElyG6h5c108",
+  token: TEST_TOKEN,
 };
 const fakeErrorData = {
   status: "error",
@@ -26,11 +26,7 @@ const fakeErrorData = {
     message: "error",
   },
 };
-const fakeUserData = {
-  id: 1,
-  email: "test@mail.ru",
-  role: "USER",
-};
+const fakeUserData = TEST_DATA_FROM_TOKEN
 const fakePayload = { email: "22", password: "22" };
 
 describe("saga user", () => {

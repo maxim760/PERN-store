@@ -22,16 +22,6 @@ const fakeUser: IUser = {
   role: "ADMIN",
 };
 
-const fakeUserLogin: IUserForLogin = {
-  email: "mail@a.ru",
-  password: "qwerty",
-};
-const fakeUserReg: IUserForRegister = {
-  email: "mail@a.ru",
-  password: "qwerty",
-  role: "ADMIN",
-};
-
 const fakeError: IAuthError = {
   message: "ошибка",
   status: 500,
