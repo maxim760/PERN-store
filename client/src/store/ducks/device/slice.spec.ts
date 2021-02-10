@@ -46,6 +46,7 @@ describe("device slice", () => {
       },
     });
   });
+  //TODO: затестить апи типа щопросы отс ервера тоже прекольна!!!
   it("setDevices", () => {
     expect(
       deviceReducer(
