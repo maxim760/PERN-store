@@ -7,12 +7,13 @@ import {
 } from "../../../services/api/userApi";
 import { ILoadingStatus } from "../types";
 
-const initialState: IUserState = {
+export const initialState: IUserState = {
   isAuth: false,
   user: null,
   authStatus: ILoadingStatus.NEVER,
   authError: null,
 };
+
 
 const userSlice = createSlice({
   name: "user",
@@ -40,6 +41,8 @@ const userSlice = createSlice({
     },
     setAuthStatusError(state, action: PayloadAction<void>) {
       state.authStatus = ILoadingStatus.ERROR;
+      state.isAuth = false
+      state.user = null
     },
     setAuthStatusNever(state, action: PayloadAction<void>) {
       state.authStatus = ILoadingStatus.NEVER;

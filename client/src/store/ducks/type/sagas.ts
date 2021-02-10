@@ -6,7 +6,6 @@ export function* typeWatcher() {
   yield takeLatest(setSelectedType, typeWorker )
 }
 
-function* typeWorker() {
-  console.log("type worker")
+export function* typeWorker() {
   yield put(setPage(1))
 }

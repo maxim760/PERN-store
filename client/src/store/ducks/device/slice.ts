@@ -28,10 +28,11 @@ const deviceSlice = createSlice({
     removeDevice(state, action: PayloadAction<number>) {
       const id = action.payload;
       const index = state?.devices?.rows?.findIndex((device) => device.id === id);
-      if (index && state?.devices) {
+      if (index !== undefined && index > -1 && state?.devices) {
         state.devices.rows.splice(index, 1);
-        state.devices.count--;
-      }
+        state.devices.count -= 1;
+      } 
+
     },
     updateDevice(
       state,

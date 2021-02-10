@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IPageState } from "./types";
 
-const initialState: IPageState = {
+export const initialState: IPageState = {
   page: 1,
   totalCount: 0,
   limit: 3,

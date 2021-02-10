@@ -19,7 +19,9 @@ const brandSlice = createSlice({
     removeBrand(state, action: PayloadAction<number>) {
       const id = action.payload;
       const index = state.brands.findIndex((brand) => brand.id === id);
-      state.brands.splice(index, 1);
+      if (index > -1) {
+        state.brands.splice(index, 1);
+      }
     },
     updateBrand(state, action: PayloadAction<IBrand>) {
       const { id, name } = action.payload;

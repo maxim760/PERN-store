@@ -24,7 +24,7 @@ export function* userWatcher() {
   yield takeLatest(fetchRegisterUser, userRegisterWorker);
 }
 
-function* userLoginWorker({ payload }: PayloadAction<IUserForLogin>) {
+export function* userLoginWorker({ payload }: PayloadAction<IUserForLogin>) {
   const data: IResultError | IResult = yield call(UserApi.login, payload);
   if (data.status === "error") {
     yield put(setAuthStatusError());
@@ -37,7 +37,7 @@ function* userLoginWorker({ payload }: PayloadAction<IUserForLogin>) {
     yield put(setIsAuth())
   }
 }
-function* userRegisterWorker({ payload }: PayloadAction<IUserForRegister>) {
+export function* userRegisterWorker({ payload }: PayloadAction<IUserForRegister>) {
   const data: IResultError | IResult = yield call(
     UserApi.registration,
     payload
